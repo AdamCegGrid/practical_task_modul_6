@@ -48,11 +48,3 @@ As a user, I want to be able to search for friends by name on the search page. T
 6. **Performance:**
     - **Input:** Perform multiple searches quickly.
     - **Expected Result:** Search results continue to display quickly without significant delay.
-
-### Steps:
-
-1. Conduct unit tests for the search function.
-2. Test the user interface to ensure it displays search results correctly.
-3. Verify that clicking on the nickname opens the correct user's information page.
-4. Test pagination and the "Load More" function for usability and performance.
-5. Ensure edge cases are handled, such as no results found or special characters in the search query.
