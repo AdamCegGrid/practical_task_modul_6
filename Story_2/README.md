@@ -7,7 +7,7 @@
 
 ### Requirements Analysis
 
-**User Story:**
+**User Story:**  
 As a user, I want to be able to change my photo.
 
 **Acceptance Criteria:**
@@ -28,31 +28,20 @@ As a user, I want to be able to change my photo.
 ### Test Cases:
 
 1. Change Photo Option:
-
-- **Input:** Navigate to the account page.
-- **Expected Result:** The user sees a 'Change Photo' button.
-
+    - **Input:** Navigate to the account page.
+    - **Expected Result:** The user sees a 'Change Photo' button.
 2. Upload New Photo:
-
-- **Input:** Click the 'Change Photo' button and select a new photo to upload.
-- **Expected Result:** The new photo is uploaded successfully.
-
+    - **Input:** Click the 'Change Photo' button and select a new photo to upload.
+    - **Expected Result:** The new photo is uploaded successfully.
 3. Replace Old Photo:
-
-- **Input:** Upload a new photo.
-- **Expected Result:** The new photo replaces the old one and is saved to the user's profile.
-
+    - **Input:** Upload a new photo.
+    - **Expected Result:** The new photo replaces the old one and is saved to the user's profile.
 4. Display Updated Photo:
-
-- **Input:** After uploading a new photo, refresh the account page.
-- **Expected Result:** The updated photo is displayed on the account page.
-
+    - **Input:** After uploading a new photo, refresh the account page.
+    - **Expected Result:** The updated photo is displayed on the account page.
 5. File Format Handling:
-
-- **Input:** Upload photos in different formats (e.g., .jpg, .png, .gif).
-- **Expected Result:** Photos in supported formats are uploaded successfully.
-
+    - **Input:** Upload photos in different formats (e.g., .jpg, .png, .gif).
+    - **Expected Result:** Photos in supported formats are uploaded successfully.
 6. Large File Upload:
-
-- **Input:** Upload a large photo file.
-- **Expected Result:** The large photo file is uploaded successfully without any performance issues.
+    - **Input:** Upload a large photo file.
+    - **Expected Result:** The large photo file is uploaded successfully without any performance issues.
