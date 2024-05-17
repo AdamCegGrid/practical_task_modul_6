@@ -7,7 +7,7 @@
 
 ### Requirements Analysis
 
-**User Story:**
+**User Story:**  
 As a user, I want to be able to search for friends by name on the search page. The search result should appear on the results page quickly. The search result must contain the user's photo and nickname. The user's nickname must be clickable, and after clicking on the user's nickname, a page with information should be opened.
 
 **Acceptance Criteria:**
