@@ -28,6 +28,31 @@ As a user, I want to be able to search for friends by name on the search page. T
 
 **Testing:**
 
-- Conduct unit tests for the search function.
-- Test the user interface to make sure it displays search results correctly.
-- Test pagination and the “Load More” function.
+### Test Cases:
+
+1. **Search Functionality:**
+    - **Input:** Enter a valid user name in the search bar.
+    - **Expected Result:** Search results appear quickly, displaying the user's photo and nickname.
+2. **Clickable Nickname:**
+    - **Input:** Click on a user's nickname in the search results.
+    - **Expected Result:** The user's information page is opened.
+3. **Pagination:**
+    - **Input:** Perform a search that yields more than 10 results.
+    - **Expected Result:** The first 10 results are displayed, with a 'Load More' button at the bottom.
+4. **Load More Results:**
+    - **Input:** Click the 'Load More' button.
+    - **Expected Result:** Additional results are loaded and displayed below the initial results.
+5. **Empty Search Results:**
+    - **Input:** Enter a name that does not match any user.
+    - **Expected Result:** A message indicating no results found is displayed.
+6. **Performance:**
+    - **Input:** Perform multiple searches quickly.
+    - **Expected Result:** Search results continue to display quickly without significant delay.
+
+### Steps:
+
+1. Conduct unit tests for the search function.
+2. Test the user interface to ensure it displays search results correctly.
+3. Verify that clicking on the nickname opens the correct user's information page.
+4. Test pagination and the "Load More" function for usability and performance.
+5. Ensure edge cases are handled, such as no results found or special characters in the search query.
