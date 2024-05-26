@@ -1,5 +1,7 @@
-### Story_3
-**Requirements:**
+# Review of Requirements for Story 2
+
+### Requirement Summary:
+
 - *There is a form of three input fields and 1 button.*  
 - *A valid value for each field is [-81; +729].*  
 - *Illegal characters etc are filtered out automatically, so only digits and “-”/”+” could be entered.*  
@@ -13,76 +15,36 @@
 
 ## [Solution](#)
 
-### Requirements Analysis
+### Pros:
 
-**Requirements:**  
-There is a form with three input fields (A, B, C) and one button. A valid value for each field is [-81; +729]. Illegal characters are filtered out automatically. These fields represent the sides of a triangle. When the button is pressed, the system determines the type of triangle based on the side lengths.
+- **Specific:** The requirement clearly outlines what the form should contain and the expected outputs based on the input, which are well-defined triangle types.
+- **Functional:** It addresses the functionality directly related to the user’s actions and the system’s response.
 
-**System Responses:**
+### Cons:
 
-- The triangle is equilateral (A == B == C)
-- The triangle is isosceles (A == B != C)
-- The triangle is scalene (A != B != C)
+- **Lacks Error Handling Details:** It doesn’t specify what happens if the inputs do not form a valid triangle or if the inputs are outside the specified range after filtering.
+- **Assumptions on Filtering:** The statement about automatic filtering of illegal characters is vague — does it include validation against non-numeric characters, and how is it communicated to the user?
+- **Validation Needs:** No details on how the system should handle cases that defy the triangle inequality theorem (the sum of the lengths of any two sides must be greater than the length of the remaining side).
 
-**Test Cases:**
+### Conclusion:
 
-1. **Valid Input Tests:**
-    - **Equilateral Triangle:**
-        - Input: A = 100, B = 100, C = 100
-        - Expected Output: "The T. is equilateral aka A==B==C"
-    - **Isosceles Triangle:**
-        - Input: A = 100, B = 100, C = 150
-        - Expected Output: "The T. is isosceles aka A==B!=C"
-    - **Scalene Triangle:**
-        - Input: A = 100, B = 150, C = 200
-        - Expected Output: "The T. is scalene aka A=!B!=C"
-2. **Boundary Value Tests:**
-    - **Minimum Boundary:**
-        - Input: A = -81, B = -81, C = -81
-        - Expected Output: "The T. is equilateral aka A==B==C" (assuming the system handles negative values correctly)
-    - **Maximum Boundary:**
-        - Input: A = 729, B = 729, C = 729
-        - Expected Output: "The T. is equilateral aka A==B==C"
-    - **Mixed Boundary:**
-        - Input: A = -81, B = 729, C = 0
-        - Expected Output: "The T. is scalene aka A=!B!=C"
-3. **Invalid Input Tests:**
-    - **Out of Range Values:**
-        - Input: A = -100, B = 50, C = 50
-        - Expected Output: No output / error message (assuming validation prevents out-of-range values)
-    - **Non-numeric Characters:**
-        - Input: A = "abc", B = 50, C = 50
-        - Expected Output: No output / error message (assuming validation filters out non-numeric characters)
+While the basic functionality is covered, the requirement lacks comprehensive error handling and user feedback mechanisms. It needs more specifics to ensure clarity and robust implementation.
 
-**Tasks:**
+## Questions to Improve the Requirements
 
-1. Implement validation to ensure inputs are within the valid range.
-2. Implement functionality to determine the type of triangle based on the inputs.
-3. Write test cases to cover different scenarios including valid inputs, boundary values, and invalid inputs.
+1. What happens if the entered values do not adhere to the triangle inequality theorem? Should the system display an error message?
+2. How should the system validate and react to inputs outside the valid range of [-81; +729] despite automatic filtering?
+3. What feedback should the user receive if illegal characters are entered, given the automatic filtering?
+4. Is there any visual or textual feedback provided to the user upon successful or unsuccessful submission of the form?
+5. Should the input fields have any specific format or placeholder texts to guide the user?
+6. How is the system's responsiveness defined? How quickly should it classify the triangle once the data is submitted?
+7. Are there any accessibility considerations for users with disabilities in using the form?
+8. What are the security considerations, if any, for submitting the triangle data?
 
-**Testing:**
+## How to Apply These Improvements
 
-### Test Cases:
+1. **Revision of Requirement Statements:** Requirements should be updated to include responses to the questions, specifying what error messages to display, how inputs are validated, and the format of user feedback.
 
-1. Input Validation:
-    - **Test Case:** Enter values within the range [-81; +729].
-    - **Expected Result:** The input is accepted.
-    - **Test Case:** Enter values outside the range [-81; +729].
-    - **Expected Result:** The system displays an error message.
-2. Triangle Type Determination:
-    - **Test Case:** Enter equal values for all three sides (e.g., A = 100, B = 100, C = 100).
-    - **Expected Result:** The system identifies the triangle as equilateral.
-    - **Test Case:** Enter two equal values and one different value (e.g., A = 100, B = 100, C = 150).
-    - **Expected Result:** The system identifies the triangle as isosceles.
-    - **Test Case:** Enter three different values (e.g., A = 100, B = 150, C = 200).
-    - **Expected Result:** The system identifies the triangle as scalene.
-3. Boundary Value Testing:
-    - **Test Case:** Enter minimum boundary values (e.g., A = -81, B = -81, C = -81).
-    - **Expected Result:** The system identifies the triangle type correctly.
-    - **Test Case:** Enter maximum boundary values (e.g., A = 729, B = 729, C = 729).
-    - **Expected Result:** The system identifies the triangle type correctly.
-4. Invalid Input Testing:
-    - **Test Case:** Enter a non-numeric value (e.g., A = "abc", B = 50, C = 50).
-    - **Expected Result:** The system displays an error message.
-    - **Test Case:** Enter a negative value outside the valid range (e.g., A = -100, B = 50, C = 50).
-    - **Expected Result:** The system displays an error message.
+2. **Adjustment of Acceptance Criteria:** Detailed behaviors such as error handling and visual feedback should be incorporated into the acceptance criteria. These must be measurable and directly testable.
+
+3. **Expansion of Test Cases:** Additional test cases should be formulated to encompass not just successful input scenarios but also various error conditions and user feedback expectations.
